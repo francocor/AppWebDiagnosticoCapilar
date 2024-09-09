@@ -1,0 +1,60 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    width: 150px; 
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #000;
+    margin-bottom: 10px;
+  }
+  
+  
+  .custom-navbar {
+    background-color: #fff; /* Blanco */
+    border-top: 2px solid black; /* Línea separadora para un efecto moderno */
+    padding: 10px 0;
+    border-bottom: 2px solid black;
+  }
+  
+  .menu-options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+  }
+  
+  .nav-link-item {
+    color: #000; /* Color del texto negro */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 0 15px;
+    
+  }
+  
+  .nav-link-item:hover {
+    color: #888; /* Color de hover gris */
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para el responsive */
+  @media (max-width: 768px) {
+    .logo {
+      width: 120px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+    }
+  
+    .nav-link-item {
+      font-size: 1rem;
+    }
+  
+    .custom-navbar {
+      border-top: none; /* Elimina la línea separadora en pantallas pequeñas */
+    }
+  }
