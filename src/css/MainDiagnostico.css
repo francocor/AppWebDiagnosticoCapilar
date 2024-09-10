@@ -1,0 +1,37 @@
+.TITULO{
+    display: flex;
+    justify-content: center;
+}
+
+
+.Cards1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+.opciones {
+    width: 15rem;
+    border: 3px solid black;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+}
+
+.opciones img {
+    flex-grow: 1; /* Hace que la imagen ocupe todo el espacio disponible */
+    object-fit: cover; /* Ajusta la imagen para que se recorte si es necesario */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la card */
+    height: auto;
+}
+
+.Titulos {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    margin: 0; /* Elimina el margen del título */
+    font-size: 1.2rem;
+}
