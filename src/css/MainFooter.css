@@ -1,0 +1,42 @@
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-info {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .footer-info p {
+    margin: 5px 0;
+  }
+  
+  .footer-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre logo y texto */
+  }
+  
+  .footer-logo {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #000;
+  }
+  
+  .footer-copy p {
+    color: #777;
+    font-size: 0.9rem;
+  }

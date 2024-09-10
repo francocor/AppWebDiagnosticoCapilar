@@ -4,13 +4,15 @@ import LogoApp from "../assets/LogoApp.png"
 
 const Header = () => {
   return (
+    <div className="Header">
+
     <div>
         <div className="logo-container">
         <img
           src={LogoApp} 
           alt="Diagnóstico Capilar Logo"
           className="logo"
-        />
+          />
       </div>
 
       
@@ -27,6 +29,7 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+    </div>
     </div>
   )
 }

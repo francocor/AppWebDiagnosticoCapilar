@@ -1,0 +1,99 @@
+
+
+
+/*-----------CARRUSEL-------------*/
+.carousel-container {
+    max-width: 60%;
+    margin: 20px auto 0;
+    
+  }
+
+  .carousel{
+    border: 3px solid black;
+  }
+  
+  .carousel-item img {
+    width: 100%; 
+    height: auto; 
+  }
+  
+  
+  .carousel-item {
+    height: 400px; 
+  }
+  
+  .carousel-item img {
+    height: 100%; 
+    object-fit: cover; 
+  }
+  
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: #fff; 
+    padding: 10px; 
+    border-radius: 5px; 
+  }
+  
+  .carousel-caption h5,
+  .carousel-caption p {
+    margin: 0; 
+    font-weight: bold; 
+    color: white;
+  }
+
+
+  /*-------------Cards-----------------------*/
+
+  .CardsHome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px; 
+    margin-top: 20px; 
+  }
+  
+  .custom-card {
+    width: 15rem;
+    border: 3px solid black; 
+    box-sizing: border-box; 
+  }
+  
+  .custom-card img {
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .custom-card .card-title, .custom-card .card-text {
+    text-align: center; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .CardsHome {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .custom-card {
+      width: 100%;
+    }
+  }
+
+
+  .THebraCapilar {
+    margin-top: 20px; /* Margen superior para separar del contenido anterior */
+    display: flex;
+    justify-content: center; /* Centra la card horizontalmente */
+  }
+  
+  .TipoDeH {
+    width: 50rem; /* Ajusta el tamaño de la card. Puedes cambiar este valor para probar diferentes tamaños */
+    border: 3px solid black; /* Borde negro de 3px */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+  }
+  
+  .TipoDeH img {
+    height: 400px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño sin distorsionarse */
+  }

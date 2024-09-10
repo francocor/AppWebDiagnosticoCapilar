@@ -1,7 +1,11 @@
+.Header{
+    background-color: #ddd;
+}
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    ;
+    
   }
   
   .logo {
@@ -14,7 +18,7 @@
   
   
   .custom-navbar {
-    background-color: #fff; /* Blanco */
+    background-color: #ddd; /* Blanco */
     border-top: 2px solid black; /* Línea separadora para un efecto moderno */
     padding: 10px 0;
     border-bottom: 2px solid black;
