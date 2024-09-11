@@ -18,20 +18,45 @@
     box-sizing: border-box;
     position: relative;
     display: flex;
-    flex-direction: column; /* Asegura que el contenido esté en columna */
+    flex-direction: column;
+    transition: transform 0.2s ease,;
+    border-color: 0.2s ease;
 }
 
 .opciones img {
-    flex-grow: 1; /* Hace que la imagen ocupe todo el espacio disponible */
-    object-fit: cover; /* Ajusta la imagen para que se recorte si es necesario */
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la card */
+    flex-grow: 1; 
+    object-fit: cover; 
+    width: 100%; 
     height: auto;
 }
 
 .Titulos {
     text-align: center;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
-    margin: 0; /* Elimina el margen del título */
+    background-color: rgba(255, 255, 255, 0.8); 
+    margin: 0; 
     font-size: 1.2rem;
+}
+
+.selected {
+    border-color: #007bff; /* Cambia el color del borde de la card seleccionada */
+    transform: scale(1.05); /* Agranda ligeramente la card seleccionada */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Sombra para resaltar más */
+}
+
+
+.Card2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+.Opcional{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 20px;
 }
