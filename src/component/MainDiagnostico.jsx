@@ -49,23 +49,25 @@ const MainDiagnostico = () => {
     }
 
     const generateRecommendation = () => {
-        let rec = ""
+        let rec = [
+
+        ]
         if (selectedCard === 0) {
-            rec += "Se recomienda Línea CURLS, OMNI RESTORE, MOISTURE, NOURISHING OIL, HIGIENE DIARIA."
+            rec.push ("Se recomienda Línea CURLS, OMNI RESTORE, MOISTURE, NOURISHING OIL, HIGIENE DIARIA.")
         }
         if (selectedCard === 1) {
-            rec += "Se recomienda Línea CURLS, OMNI RESTORE, MOISTURE, NOURISHING OIL, HIGIENE DIARIA."
+            rec.push ("Se recomienda Línea CURLS, OMNI RESTORE, MOISTURE, NOURISHING OIL, HIGIENE DIARIA.")
         }
         if (selectedCard === 2) {
-            rec += "Se recomienda Limpieza, Shampoo PROFONDO, Shampoo TONICO, LÍNEA COLOR CARE."
+            rec.push ("Se recomienda Limpieza, Shampoo PROFONDO, Shampoo TONICO, LÍNEA COLOR CARE.")
         }
 
         if (optionalCards.length > 0) {
-            rec += " También considera los siguientes tratamientos opcionales: "
-            if (optionalCards.includes(0)) rec += "Utilizar productos suaves y evitar tratamientos agresivos. "
-            if (optionalCards.includes(1)) rec += "Masajes regulares y uso de productos que fortalezcan el cabello. "
-            if (optionalCards.includes(2)) rec += "Sugerir consulta médica (análisis clínicos). Favorecer la revitalización biológica capilar. "
-            if (optionalCards.includes(3)) rec += "Derivar a dermatólogo."
+            rec.push (" También considera los siguientes tratamientos opcionales: ")
+            if (optionalCards.includes(0)) rec.push ("Utilizar productos suaves y evitar tratamientos agresivos. ")
+            if (optionalCards.includes(1)) rec.push ("Masajes regulares y uso de productos que fortalezcan el cabello. ")
+            if (optionalCards.includes(2)) rec.push ("Sugerir consulta médica (análisis clínicos). Favorecer la revitalización biológica capilar. ")
+            if (optionalCards.includes(3)) rec.push ("Derivar a dermatólogo.")
         }
         setRecommendation(rec)
     }
@@ -89,7 +91,7 @@ const MainDiagnostico = () => {
                 <Card className="opciones">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header className="Titulos">SECO</Accordion.Header>
+                            <Accordion.Header className="Titulos">Seco</Accordion.Header>
                             <Accordion.Body>
                                 * Falta de hidratación y aceites naturales. <br />
                                 * Sensación de tirantez o picazón. <br />
@@ -109,7 +111,7 @@ const MainDiagnostico = () => {
                 <Card className="opciones">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header className="Titulos">NORMAL</Accordion.Header>
+                            <Accordion.Header className="Titulos">Normal</Accordion.Header>
                             <Accordion.Body>
                                 * Equilibrio adecuado de humedad y sebo. <br />
                                 * Aspecto saludable y libre de sequedad o exceso de grasa. <br />
@@ -129,7 +131,7 @@ const MainDiagnostico = () => {
                 <Card className="opciones">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header className="Titulos">GRASO</Accordion.Header>
+                            <Accordion.Header className="Titulos">Graso</Accordion.Header>
                             <Accordion.Body>
                                 * Producción excesiva de sebo. <br />
                                 * Sensación de pesadez, cuero cabelludo aceitoso al tacto. <br />
@@ -153,7 +155,7 @@ const MainDiagnostico = () => {
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header className="Titulos">SEBORREA</Accordion.Header>
+                                    <Accordion.Header className="Titulos">Seborrea</Accordion.Header>
                                     <Accordion.Body>
                                         * Exceso de producción de sebo, lo que genera un cuero cabelludo graso. <br />
                                         * Apariencia brillante y aceitosa del cuero cabelludo y cabello. <br />
@@ -175,7 +177,7 @@ const MainDiagnostico = () => {
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header className="Titulos">DESHIDRATADO</Accordion.Header>
+                                    <Accordion.Header className="Titulos">Deshidratado</Accordion.Header>
                                     <Accordion.Body>
                                         * Falta de hidratación, pero no necesariamente de grasa. <br />
                                         * Sensación de sequedad, tirantez y picazón. <br />
@@ -197,7 +199,7 @@ const MainDiagnostico = () => {
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header className="Titulos">PITIASIS SIMPLE</Accordion.Header>
+                                    <Accordion.Header className="Titulos">Pitiasis Simple</Accordion.Header>
                                     <Accordion.Body>
                                         * Descamación fina y seca del cuero cabelludo. <br />
                                         * Pequeñas escamas blancas que caen fácilmente sobre los hombros. <br />
@@ -219,7 +221,7 @@ const MainDiagnostico = () => {
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header className="Titulos">PITIASIS ESTEROIDEA</Accordion.Header>
+                                    <Accordion.Header className="Titulos">Pitiasis Esteroidea</Accordion.Header>
                                     <Accordion.Body>
                                         * Descamación severa y en parches en el cuero cabelludo. <br />
                                         * Escamas más grandes y gruesas que las de la pitiasis simple. <br />
@@ -245,7 +247,7 @@ const MainDiagnostico = () => {
                     <Card className="opciones">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className="Titulos">EFLUVIO</Accordion.Header>
+                                <Accordion.Header className="Titulos">Efluvio</Accordion.Header>
                                 <Accordion.Body>
                                     * Pérdida temporal de cabello debido a estrés o condiciones internas. <br />
                                     * Aumento de la caída del cabello que puede ser notorio durante el baño o el cepillado. <br />
@@ -265,7 +267,7 @@ const MainDiagnostico = () => {
                     <Card className="opciones">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className="Titulos">ESTRÉS</Accordion.Header>
+                                <Accordion.Header className="Titulos">Estres</Accordion.Header>
                                 <Accordion.Body>
                                     * Impacto negativo del estrés en la salud capilar. <br />
                                     * Puede contribuir a la pérdida de cabello o al debilitamiento del mismo. <br />
@@ -285,7 +287,7 @@ const MainDiagnostico = () => {
                     <Card className="opciones">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className="Titulos">ALOPICIA</Accordion.Header>
+                                <Accordion.Header className="Titulos">Alopecia</Accordion.Header>
                                 <Accordion.Body>
                                     * Pérdida de cabello que puede ser localizada o difusa. <br />
                                     * Puede ser causada por diversos factores, incluidos genéticos, hormonales o autoinmunes. <br />
@@ -305,7 +307,7 @@ const MainDiagnostico = () => {
                     <Card className="opciones">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className="Titulos">DERMATITIS</Accordion.Header>
+                                <Accordion.Header className="Titulos">Dermatitis</Accordion.Header>
                                 <Accordion.Body>
                                     * Inflamación crónica del cuero cabelludo. <br />
                                     * Puede presentar enrojecimiento, picazón y descamación. <br />
@@ -324,10 +326,19 @@ const MainDiagnostico = () => {
                 </div>
             )}
 
-            <button className="btn btn-primary" onClick={handleFinish}>Finalizar</button>
+            <button className="btn" onClick={handleFinish}>Finalizar</button>
             {showError && <p className="error">Debe seleccionar una opción de cada paso.</p>}
-            {recommendation && <div className="recommendation"><h3>Recomendación:</h3><p>{recommendation}</p></div>}
+            {recommendation.length > 0 &&(
+                <div className="Recommendation">
+                    <h3>Recomendaciones:</h3>
+                    <ul>
+                        {recommendation.map((item, index)=>(
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
         </div>
+        )}
+    </div>
     )
 }
 

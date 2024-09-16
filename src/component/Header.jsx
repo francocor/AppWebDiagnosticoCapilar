@@ -25,7 +25,7 @@ const Header = () => {
             <Nav.Link href="/DiagnosticoCapilar" className="nav-link-item">
               Diagnóstico Capilar
             </Nav.Link>
-            <Nav.Link to="#hebra-capilar" className="nav-link-item">
+            <Nav.Link href="/HebraCapilar" className="nav-link-item">
               Hebra Capilar
             </Nav.Link>
           </Nav>
