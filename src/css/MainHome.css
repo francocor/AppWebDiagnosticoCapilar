@@ -1,4 +1,9 @@
-
+.Home{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 
 
 /*-----------CARRUSEL-------------*/
@@ -49,6 +54,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 5px; 
     margin-top: 20px; 
   }
@@ -56,6 +63,7 @@
   .custom-card {
     width: 15rem;
     border: 3px solid black; 
+    border-radius: 8px;
     box-sizing: border-box; 
   }
   
@@ -82,18 +90,18 @@
 
 
   .THebraCapilar {
-    margin-top: 20px; /* Margen superior para separar del contenido anterior */
+    margin-top: 20px; 
     display: flex;
-    justify-content: center; /* Centra la card horizontalmente */
+    justify-content: center; 
   }
   
   .TipoDeH {
-    width: 50rem; /* Ajusta el tamaño de la card. Puedes cambiar este valor para probar diferentes tamaños */
-    border: 3px solid black; /* Borde negro de 3px */
-    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+    width: 50rem;  
+    border: 3px solid black; 
+    box-sizing: border-box; 
   }
   
   .TipoDeH img {
-    height: 400px; /* Ajusta la altura de la imagen */
-    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño sin distorsionarse */
+    height: auto; 
+    object-fit: cover; 
   }

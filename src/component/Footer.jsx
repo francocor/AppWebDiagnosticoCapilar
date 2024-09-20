@@ -1,5 +1,5 @@
 import "../css/MainFooter.css"
-import LogoCrea from "../assets/LogoCrea.png"
+import TecItali from "../assets/tecitali.jpg"
 
 const Footer = () => {
   return (
@@ -12,8 +12,8 @@ const Footer = () => {
           <p>Email: contacto@ejemplo.com</p>
         </div>
         <div className="footer-copy">
-          <img src={LogoCrea} alt="Logo" className="footer-logo" />
-          <p>&copy; 2024 CodeCraftStudio. Todos los derechos reservados.</p>
+          <img src={TecItali} alt="Logo" className="footer-logo" />
+          <p>&copy; 2024 Tec Italy. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

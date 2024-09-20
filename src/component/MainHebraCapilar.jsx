@@ -11,7 +11,7 @@ import CabelloDecolorado from "../assets/decolorado.jpg";
 import CabelloAlisado from "../assets/alisado.jpg";
 import Permanentes from "../assets/permanente.jpg";
 import Quiebre from "../assets/Quiebre.png";
-import Porosidad from "../assets/Porosidad.png";
+import Porosidad from "../assets/Porosidad.jpg";
 import Deshidratacion from "../assets/deshidratacion.png";
 import SinBrillo from "../assets/SinBrillo.png";
 import SobreProcesado from "../assets/sobreprocesado.png";
@@ -64,19 +64,19 @@ const MainHebraCapilar = () => {
             recs.push("Recomendación: Línea Curls para rulos.");
         }
         if (thirdStepCard === 8) {
-            recs.push("Recomendación: Línea Repair para quiebre.");
+            recs.push("Recomendación: Línea Repair para el quiebre.");
         }
         if (thirdStepCard === 9) {
-            recs.push("Recomendación: Línea Omni Restore (Para todo tipo de cabello) o Línea Nourishing Oil (Para cabellos medio o grueso) para porosidad.");
+            recs.push("Recomendación: Línea Omni Restore (Para todo tipo de cabello) o Línea Nourishing Oil (Para cabellos medio o grueso) para la porosidad.");
         }
         if (thirdStepCard === 10) {
-            recs.push("Recomendación: Línea Moisture para deshidratación.");
+            recs.push("Recomendación: Línea Moisture para la deshidratación.");
         }
         if (thirdStepCard === 11) {
-            recs.push("Recomendación: Línea Omni Restore (Para todo tipo de cabello) o Línea Nourishing Oil (Para cabellos medio o grueso) para falta de brillo.");
+            recs.push("Recomendación: Línea Omni Restore (Para todo tipo de cabello) o Línea Nourishing Oil (Para cabellos medio o grueso) para la falta de brillo.");
         }
         if (thirdStepCard === 12) {
-            recs.push("Recomendación: Línea Repair para sobreprocesado.");
+            recs.push("Recomendación: Línea Repair para el sobreprocesado.");
         }
         setRecommendations(recs);
     };
@@ -91,7 +91,7 @@ const MainHebraCapilar = () => {
     };
 
     return (
-        <div>
+        <div className="HebrCap">
             <h1 className="TITULO">Hebra Capilar</h1>
 
             <div className="Cards1">
@@ -177,6 +177,8 @@ const MainHebraCapilar = () => {
 
             {selectedCard !== null && (
                 <div className="Card2">
+                    <h3 className="subtitulo">Segundas <br /> opciones</h3>
+
                     {secondStepOption[selectedCard].includes(4) && (
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
@@ -269,6 +271,8 @@ const MainHebraCapilar = () => {
 
             {secondStepCard !== null && (
                 <div className="Card3">
+                    <h3 className="subtitulo">Terceras <br /> opciones</h3>
+
                     {thirdStepOption[secondStepCard].includes(8) && (
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
@@ -289,8 +293,8 @@ const MainHebraCapilar = () => {
                             />
                         </Card>
                     )}
-
-                    {thirdStepOption[secondStepCard].includes(9) && (
+                    
+                    {thirdStepOption[secondStepCard].includes(9) && (                           
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
@@ -310,7 +314,7 @@ const MainHebraCapilar = () => {
                             />
                         </Card>
                     )}
-
+                            
                     {thirdStepOption[secondStepCard].includes(10) && (
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
@@ -331,7 +335,7 @@ const MainHebraCapilar = () => {
                             />
                         </Card>
                     )}
-
+                        
                     {thirdStepOption[secondStepCard].includes(11) && (
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
@@ -368,29 +372,31 @@ const MainHebraCapilar = () => {
                             <Card.Img
                                 variant="top"
                                 src={SobreProcesado}
-                                className={`Img ${thirdStepCard === 12 ? "selected" : ""}`}
+                                className={`Img ${thirdStepCard === 12 ? "selected" : ""}`}                           
                                 onClick={() => handleThirdSelection(12)}
                             />
                         </Card>
                     )}
-                </div>
-            )}
-
-            <button className="btn" onClick={handleFinish}>Finalizar</button>
-
-            {showError && <div className="error">Por favor, selecciona todas las opciones para recibir una recomendación.</div>}
-            {recommendations.length > 0 && (
-                <div className="recommendations">
-                    <h2>Recomendaciones:</h2>
-                    <ul>
-                        {recommendations.map((rec, index) => (
-                            <li key={index}>{rec}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </div>
-    );
-};
+                    </div>
+                                    
+                        
+                )}
+                
+                <button className="btn" onClick={handleFinish}>Finalizar</button>
+                
+                {showError && <div className="error">Por favor, selecciona todas las opciones para recibir una recomendación.</div>}
+                {recommendations.length > 0 && (
+                    <div className="recommendations">
+                        <h2>Recomendaciones:</h2>
+                        <ul>
+                            {recommendations.map((rec, index) => (
+                                <li key={index}>{rec}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+        );
+    };
 
 export default MainHebraCapilar;

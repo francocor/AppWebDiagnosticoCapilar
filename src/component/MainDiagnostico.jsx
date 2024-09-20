@@ -5,7 +5,7 @@ import Accordion from "react-bootstrap/Accordion"
 import CueroCabelludoSeco from "../assets/CueroCabelludoSeco.jpg"
 import CueroCabelludoNormal from "../assets/CueroCabelludoNormal.png"
 import CueroCabelludoGraso from "../assets/CueroCabelludoGraso.jpg"
-import Seborrea from "../assets/Seborrea.png"
+import Seborrea from "../assets/Seborrea.jpg"
 import Deshidratado from "../assets/Deshidratado.jpg"
 import PitiasisEsteroidea from "../assets/pitiasisesteroidea.png"
 import PitiasisSimple from "../assets/PitiasisSimple.jpg"
@@ -82,7 +82,7 @@ const MainDiagnostico = () => {
     }
 
     return (
-        <div>
+        <div className="DiagCap">
             <div>
                 <h1 className="TITULO">Diagnóstico Capilar</h1>
             </div>
@@ -151,6 +151,7 @@ const MainDiagnostico = () => {
 
             {selectedCard !== null && (
                 <div className="Card2">
+                    <h3 className="Subtitulo">Segundas <br /> opciones</h3>
                     {secondStepOption[selectedCard].includes(3) && (
                         <Card className="opciones">
                             <Accordion defaultActiveKey="0">
@@ -243,7 +244,7 @@ const MainDiagnostico = () => {
 
             {secondStepCard !== null && (
                 <div className="Opcional">
-                    <h3 className="Subtitulo">Opcional</h3>
+                    <h3 className="Subtitulo">Seleccion <br /> Opcional</h3>
                     <Card className="opciones">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">

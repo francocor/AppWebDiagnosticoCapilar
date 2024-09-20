@@ -6,7 +6,7 @@ import CNormal from "../assets/normal.jpg";
 import CGraso from "../assets/graso.jpg";
 import CPitiasisEsteroidea from "../assets/pitiasisesteroidea.png"
 import CPitiasisSimple from "../assets/pitiasissimple.png"
-import CSeborrea from "../assets/seborrea.png"
+import CSeborrea from "../assets/seborrea.jpg"
 import CDeshidratacion from "../assets/deshidratacion.png"
 import TipoDeH from "../assets/TipoDeH.png"
 import Teñido from "../assets/teñido.jpg"

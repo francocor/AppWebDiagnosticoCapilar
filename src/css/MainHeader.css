@@ -1,18 +1,22 @@
 .Header{
     background-color: #ddd;
+    padding: 20px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 .logo-container {
     display: flex;
     justify-content: center;
-    ;
+    
     
   }
   
   .logo {
-    width: 150px; 
+    width: 250px; 
     height: auto;
-    border-radius: 50%;
-    border: 3px solid #000;
+    
     margin-bottom: 10px;
   }
   

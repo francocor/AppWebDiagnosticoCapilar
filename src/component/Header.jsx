@@ -1,6 +1,6 @@
 import "../css/MainHeader.css"
 import { Navbar, Nav } from "react-bootstrap";
-import LogoApp from "../assets/LogoApp.png"
+import TecItali from "../assets/tecitali.jpg"
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
         <div className="logo-container">
         <a href="/">
           <img
-            src={LogoApp} 
+            src={TecItali} 
             alt="Diagnóstico Capilar Logo"
             className="logo"
           />
