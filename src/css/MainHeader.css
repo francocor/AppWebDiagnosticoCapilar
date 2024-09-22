@@ -5,6 +5,8 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    background-image: url("../assets/FondoHeader.png");
+    
 }
 .logo-container {
     display: flex;
@@ -22,8 +24,8 @@
   
   
   .custom-navbar {
-    background-color: #ddd; /* Blanco */
-    border-top: 2px solid black; /* Línea separadora para un efecto moderno */
+    
+    border-top: 2px solid black; 
     padding: 10px 0;
     border-bottom: 2px solid black;
   }
