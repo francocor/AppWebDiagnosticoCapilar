@@ -2,6 +2,7 @@ import {Routes, Route} from "react-router"
 import Home from "./pages/Home"
 import DiagnosticoCapilar from "./pages/DiagnosticoCapilar"
 import HebraCapilar from "./pages/HebraCapilar"
+
 function App() {
   
 
