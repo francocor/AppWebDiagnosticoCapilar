@@ -18,16 +18,16 @@ import SobreProcesado from "../assets/sobreprocesado.png";
 
 const MainHebraCapilar = () => {
     const [selectedCard, setSelectedCard] = useState(null);
-    const [secondStepCard, setSecondStepCard] = useState(null);
-    const [thirdStepCard, setThirdStepCard] = useState(null);
+    const [secondStepCard, setSecondStepCard] = useState([]);
+    const [thirdStepCard, setThirdStepCard] = useState([]);
     const [showError, setShowError] = useState(false);
     const [recommendations, setRecommendations] = useState([]);
-
+    
     const secondStepOption = {
         0: [4, 5, 6, 7],
         1: [4, 5, 6, 7],
         2: [4, 5, 6, 7],
-        3: [4, 5, 6, 7],
+        3: [4, 5, 7],
     };
 
     const thirdStepOption = {
@@ -36,26 +36,32 @@ const MainHebraCapilar = () => {
         6: [10],
         7: [10],
     };
+    
 
     const handleFirstSelection = (cardIndex) => {
         setSelectedCard(cardIndex);
-        setSecondStepCard(null);
-        setThirdStepCard(null);
+        setSecondStepCard([]);
+        setThirdStepCard([]);
         setShowError(false);
         setRecommendations([]);
     };
 
     const handleSecondSelection = (cardIndex) => {
-        setSecondStepCard(cardIndex);
-        setThirdStepCard(null);
-        setShowError(false);
-        setRecommendations([]);
+    
+        if(secondStepCard.includes(cardIndex)){
+            setSecondStepCard(secondStepCard.filter(index => index !== cardIndex))
+        }else{
+             setSecondStepCard([...secondStepCard, cardIndex])
+        }
+        
     };
 
     const handleThirdSelection = (cardIndex) => {
-        setThirdStepCard(cardIndex);
-        setShowError(false);
-        setRecommendations([]);
+        if(thirdStepCard.includes(cardIndex)){
+            setThirdStepCard(thirdStepCard.filter(index => index !== cardIndex))
+        }else{
+            setThirdStepCard([...thirdStepCard, cardIndex])
+        }
     };
 
     const generateRecommendations = () => {
@@ -63,29 +69,35 @@ const MainHebraCapilar = () => {
         if (selectedCard === 3) {
             recs.push("Recomendación: Línea Curls para rulos.");
         }
-        if (thirdStepCard === 8) {
-            recs.push("Recomendación: Línea Repair para el quiebre.");
+        if (thirdStepCard.includes(8)) {
+            recs.push(
+                <div>
+                    Recomendación: Línea Repair para el quiebre.
+                    <a href="https://www.tecitaly.com.ar/cuidado-del-cabello/cabello-rizado.html" target="_blank"></a>
+                </div>
+            );
         }
-        if (thirdStepCard === 9) {
+        if (thirdStepCard.includes(9)) {
             recs.push("Recomendación: Línea Omni Restore (Para todo tipo de cabello) o Línea Nourishing Oil (Para cabellos medio o grueso) para la porosidad.");
         }
-        if (thirdStepCard === 10) {
+        if (thirdStepCard.includes(10)) {
             recs.push("Recomendación: Línea Moisture para la deshidratación.");
         }
-        if (thirdStepCard === 11) {
+        if (thirdStepCard.includes(11)) {
             recs.push("Recomendación: Línea Omni Restore (Para todo tipo de cabello) o Línea Nourishing Oil (Para cabellos medio o grueso) para la falta de brillo.");
         }
-        if (thirdStepCard === 12) {
+        if (thirdStepCard.includes(12)) {
             recs.push("Recomendación: Línea Repair para el sobreprocesado.");
         }
         setRecommendations(recs);
     };
 
     const handleFinish = () => {
-        if (selectedCard === null || secondStepCard === null || thirdStepCard === null) {
+        if (selectedCard === null || secondStepCard.length === 0 || thirdStepCard.length === 0) {
             setShowError(true);
             return;
         }
+
         setShowError(false);
         generateRecommendations();
     };
@@ -269,7 +281,7 @@ const MainHebraCapilar = () => {
                 </div>
             )}
 
-            {secondStepCard !== null && (
+            {/* {secondStepCard !== null && (
                 <div className="Card3">
                     <h3 className="subtitulo">Terceras <br /> opciones</h3>
 
@@ -380,11 +392,12 @@ const MainHebraCapilar = () => {
                     </div>
                                     
                         
-                )}
+                )} */}
                 
                 <button className="btn" onClick={handleFinish}>Finalizar</button>
                 
                 {showError && <div className="error">Por favor, selecciona todas las opciones para recibir una recomendación.</div>}
+                
                 {recommendations.length > 0 && (
                     <div className="recommendations">
                         <h2>Recomendaciones:</h2>
