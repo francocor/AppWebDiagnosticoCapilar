@@ -49,16 +49,14 @@ const MainDiagnostico = () => {
     }
 
     const generateRecommendation = () => {
-        let rec = [
-
-        ]
+        let rec = []
         if (selectedCard === 0) {
             rec.push (
                 <div>
-                    Se recomienda: <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/cabello-rizado.html" target="_blank">Línea CURLS</a>, 
-                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/restauracion-del-cabello.html" target="_blank">OMNI RESTORE</a>, 
-                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/hidratacion-del-cabello.html" target="_blank">MOISTURE</a>, 
-                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/enriquecidos-con-aceites.html" target="_blank">NOURISHING OIL</a>, 
+                    Se recomienda: <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/cabello-rizado.html" target="_blank"> Línea CURLS</a>, 
+                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/restauracion-del-cabello.html" target="_blank"> OMNI RESTORE</a>, 
+                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/hidratacion-del-cabello.html" target="_blank"> MOISTURE</a>, 
+                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/enriquecidos-con-aceites.html" target="_blank"> NOURISHING OIL</a>, 
                     HIGIENE DIARIA.
                     
                 </div>
@@ -67,10 +65,10 @@ const MainDiagnostico = () => {
         if (selectedCard === 1) {
                 rec.push (
                     <div>
-                    Se recomienda: <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/cabello-rizado.html" target="_blank">Línea CURLS</a>, 
-                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/restauracion-del-cabello.html" target="_blank">OMNI RESTORE</a>, 
-                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/hidratacion-del-cabello.html" target="_blank">MOISTURE</a>, 
-                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/enriquecidos-con-aceites.html" target="_blank">NOURISHING OIL</a>, 
+                    Se recomienda: <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/cabello-rizado.html" target="_blank"> Línea CURLS</a>, 
+                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/restauracion-del-cabello.html" target="_blank"> OMNI RESTORE</a>, 
+                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/hidratacion-del-cabello.html" target="_blank"> MOISTURE</a>, 
+                    <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/enriquecidos-con-aceites.html" target="_blank"> NOURISHING OIL</a>, 
                     HIGIENE DIARIA.
                     
                 </div>
@@ -81,9 +79,9 @@ const MainDiagnostico = () => {
                 rec.push (
                     <div>    
                         Se recomienda: Limpieza, 
-                        <a className="links" href="https://www.tecitaly.com/es/coloracion/uso-en-salon/shampoo-profondo.html" target="_blank">Shampoo PROFONDO</a>,
-                        <a className="links" href="https://www.tecitaly.com/es/cuidado-del-cabello/cabello-saludable/tonico-shampoo.html" target="_blank">Shampoo TONICO</a>, 
-                        <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/cuidado-del-color.html" target="_blank">LÍNEA COLOR CARE.</a>
+                        <a className="links" href="https://www.tecitaly.com/es/coloracion/uso-en-salon/shampoo-profondo.html" target="_blank"> Shampoo PROFONDO</a>,
+                        <a className="links" href="https://www.tecitaly.com/es/cuidado-del-cabello/cabello-saludable/tonico-shampoo.html" target="_blank"> Shampoo TONICO</a>, 
+                        <a className="links" href="https://www.tecitaly.com.ar/cuidado-del-cabello/cuidado-del-color.html" target="_blank"> LÍNEA COLOR CARE.</a>
                     </div>
                 )
         }
@@ -363,7 +361,7 @@ const MainDiagnostico = () => {
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
-        </div>
+                </div>
         )}
     </div>
     )
